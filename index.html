@@ -1,19 +1,40 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Capilearn</title>
+<title>Legal Information</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 20px 80px; color: #2C2C2A; background: #F5F4EF; line-height: 1.6; }
   h1 { font-size: 28px; }
+  p { font-size: 15px; color: #555; }
   a { color: #3D7DCA; display: block; margin: 12px 0; font-size: 16px; }
+  .contact { display: flex; align-items: center; gap: 8px; margin-top: 32px; }
+  .contact svg { flex-shrink: 0; }
+  .contact span, .contact a { display: inline; margin: 0; font-size: 15px; color: #333; }
 </style>
 </head>
 <body>
-  <h1>Capilearn 🌍</h1>
-  <p>Réviser les capitales du monde entier.</p>
-  <a href="./privacy.html">Politique de confidentialité</a>
-  <a href="./terms.html">Conditions d'utilisation</a>
+  <h1>Legal Information</h1>
+  <p>Privacy Policy and Terms of Use shared by all mobile apps published by this developer.</p>
+  <a href="./privacy.html">Privacy Policy</a>
+  <a href="./terms.html">Terms of Use</a>
+
+  <p class="contact">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D7DCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    <span id="contact-email">georges DOT gaston AT gmail DOT com</span>
+  </p>
+
+  <script>
+    (function () {
+      var user = ['g','e','o','r','g','e','s','.','g','a','s','t','o','n'].join('');
+      var domain = ['g','m','a','i','l','.','c','o','m'].join('');
+      var el = document.getElementById('contact-email');
+      var link = document.createElement('a');
+      link.href = 'mailto:' + user + '@' + domain;
+      link.textContent = user + '@' + domain;
+      el.replaceWith(link);
+    })();
+  </script>
 </body>
 </html>
